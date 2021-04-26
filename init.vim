@@ -22,6 +22,7 @@ set nobackup
 set nowritebackup
 set conceallevel=0
 set helplang=ja
+let g:polyglot_disabled = ['markdown']
 " htmlのマッチするタグに%でジャンプ
 source $VIMRUNTIME/macros/matchit.vim
 
@@ -65,8 +66,6 @@ autocmd Vimenter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nmap <C-m> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 50
 let g:NERDTreeQuitOnOpen = 1
-
-let g:polyglot_disabled = ['markdown']
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
