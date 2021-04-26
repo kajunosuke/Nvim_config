@@ -1,0 +1,8 @@
+[[plugins]]
+repo = 'Shougo/deoplement.nvim'
+on_event = 'InsertEnter'
+hook_add = '''
+  let g:deoplement#enable_at_startup = 1
+  inoremap <expr><Tab> pumvisible() ? "\<DOWN>" : "\<Tab>"
+  inoremap <expr><S-Tab> pumvisible() ? "\<UP>" : "\<S-Tab>"
+'''
